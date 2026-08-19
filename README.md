@@ -1,5 +1,8 @@
 # @deepseek-ai/dsh-tui
 
+[![CI](https://github.com/MirageLyu/dsh-tui/actions/workflows/ci.yml/badge.svg)](https://github.com/MirageLyu/dsh-tui/actions/workflows/ci.yml)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+
 English | [中文](README.zh.md)
 
 The full-screen interactive terminal front door for [DeepSeek Harness](https://github.com/deepseek-ai/deepseek-harness) agents — a Claude Code-style TUI that streams the agent transcript, tool cards, approvals, and questions into one keyboard-driven screen. It is an out-of-tree plugin bundle: install it into any `dsh` installation with one command, and unplug it the same way.

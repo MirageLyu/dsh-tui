@@ -1,5 +1,8 @@
 # @deepseek-ai/dsh-tui
 
+[![CI](https://github.com/MirageLyu/dsh-tui/actions/workflows/ci.yml/badge.svg)](https://github.com/MirageLyu/dsh-tui/actions/workflows/ci.yml)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+
 [English](README.md) | 中文
 
 [DeepSeek Harness](https://github.com/deepseek-ai/deepseek-harness) agent 的全屏交互式终端入口——一个 Claude Code 风格的 TUI，把 agent 的对话流、工具卡片、审批与提问集中到一个键盘驱动的界面。它是树外插件 bundle：一条命令装进任何 `dsh` 安装，同样一条命令拔除。
