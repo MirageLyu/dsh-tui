@@ -1,10 +1,7 @@
 packages:
   - .
+  - vendor/*
 
-# The pi-tui editor patch: fixed-width editor prefixes plus the frame/prompt
-# option surface the TUI renders through (see README).
-patchedDependencies:
-  '@earendil-works/pi-tui@0.80.7': patches/@earendil-works__pi-tui@0.80.7.patch
 
 # pnpm 10+ blocks any dependency shipping an install/build script until it is
 # explicitly reviewed here. node-pty (transitive via dsh-subprocess-local)
@@ -19,3 +16,9 @@ allowBuilds:
   protobufjs: false
   node-addon-require-builtin: false
   koffi: true
+
+# The published tarball depends on the pi-tui fork through an npm alias; in
+# this workspace the same name resolves to the local fork so dev installs and
+# CI use the patched source of record.
+overrides:
+  '@earendil-works/pi-tui': link:vendor/pi-tui

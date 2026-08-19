@@ -4,12 +4,15 @@ All notable changes to this project are documented in this file. The format foll
 
 ## [Unreleased]
 
-- GitHub Actions CI matrix: Ubuntu, macOS, and Windows.
-- Issue/PR templates, contributing and security policies, changelog.
+## [0.1.0-rc.6] - 2026-08-19
+
+### Fixed
+
+- The pi-tui editor patch no longer depends on the installing workspace: registry installs previously fetched an unpatched pi-tui and crashed at startup (`editor.setPrompt is not a function`). The TUI now depends on the patched fork `@miragelyu/pi-tui` (published from `vendor/pi-tui` in this repository) through an npm alias, so every install — local link, profile registry install, or dsh-cli — resolves to the patched code.
 
 ## [0.1.0-rc.5] - 2026-08-19
 
-The first release from this repository: the full-screen terminal UI extracted from the `deepseek-ai/deepseek-harness` monorepo as the standalone out-of-tree plugin `@miragelyu/dsh-tui`.
+The first release from this repository: the full-screen terminal UI extracted from the `deepseek-ai/deepseek-harness` monorepo as the standalone out-of-tree plugin `@miragelyu/dsh-tui`. Deprecated on npm: 0.1.0-rc.6 fixes the pi-tui patch distribution.
 
 ### Added
 
