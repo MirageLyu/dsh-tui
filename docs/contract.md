@@ -70,13 +70,13 @@ The launcher flags are the TUI's own family (parsed by the `./startup` provider,
 | `title` | `DeepSeek Harness` | Product suffix for the terminal window title. |
 
 ```sh
-dsh plugin --profile tui add @deepseek-ai/dsh-tui   # one-time install
+dsh plugin --profile tui add @miragelyu/dsh-tui   # one-time install
 dsh --profile tui                        # fresh session in this directory
 dsh --profile tui --continue             # resume the most recent session
 dsh --profile tui --resume <id>          # resume a specific session
 ```
 
-`dsh plugin` initializes the `tui` profile with `@deepseek-ai/dsh-base` and installs this bundle from the registry; further out-of-tree plugins join it with `dsh plugin --profile tui add <package>`, and `dsh plugin --profile tui remove @deepseek-ai/dsh-tui` unplugs the surface. `dsh --profile tui --dump-config` prints the composed tree.
+`dsh plugin` initializes the `tui` profile with `@deepseek-ai/dsh-base` and installs this bundle from the registry; further out-of-tree plugins join it with `dsh plugin --profile tui add <package>`, and `dsh plugin --profile tui remove @miragelyu/dsh-tui` unplugs the surface. `dsh --profile tui --dump-config` prints the composed tree.
 
 Startup fails before mounting when either process stream is not a TTY. The composing app must mount the TUI before its config-created agent so the front door can observe `agent-loop/config-start-failed`; a matching exact-session failure is written before fullscreen mode starts and exits with status 1 instead of leaving a blank terminal. Disposal stops extension admission, unloads the `ctx.tui` provider and its dependent plugins, aborts running commands, removes the TUI definitions, stops loaders, rejects pending questions, drains terminal input, restores terminal state, unregisters event listeners and the user-interaction provider, and never exits a replacement process during HMR. A user exit disposes the application root so sibling resources close, then exits; a five-second fallback prevents one stuck disposer from trapping the process.
 

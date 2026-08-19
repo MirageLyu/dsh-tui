@@ -3,7 +3,7 @@
  * family (`--resume`, `--continue`, `--workspace`, `--model`) and its `--help`
  * text, then provides the immutable values as {@link TUI_STARTUP_SERVICE}.
  * Ordinary rows inject that service before reading it from lazy config.
- * @module @deepseek-ai/dsh-tui/startup
+ * @module @miragelyu/dsh-tui/startup
  */
 
 import { Command } from 'commander'

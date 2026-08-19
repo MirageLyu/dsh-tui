@@ -70,13 +70,13 @@ Agent 运行时，普通编辑器提交调用 `agent.steer()`；其他时候调�
 | `title` | `DeepSeek Harness` | 终端窗口标题的产品后缀。 |
 
 ```sh
-dsh plugin --profile tui add @deepseek-ai/dsh-tui   # 一次性安装
+dsh plugin --profile tui add @miragelyu/dsh-tui   # 一次性安装
 dsh --profile tui                        # 在当前目录开启新会话
 dsh --profile tui --continue             # 恢复最近的会话
 dsh --profile tui --resume <id>          # 按 id 恢复会话
 ```
 
-`dsh plugin` 以 `@deepseek-ai/dsh-base` 初始化 `tui` profile，并从 registry 安装本 bundle；其他树外插件用 `dsh plugin --profile tui add <package>` 加入，`dsh plugin --profile tui remove @deepseek-ai/dsh-tui` 拔除本界面。`dsh --profile tui --dump-config` 打印组合后的树。
+`dsh plugin` 以 `@deepseek-ai/dsh-base` 初始化 `tui` profile，并从 registry 安装本 bundle；其他树外插件用 `dsh plugin --profile tui add <package>` 加入，`dsh plugin --profile tui remove @miragelyu/dsh-tui` 拔除本界面。`dsh --profile tui --dump-config` 打印组合后的树。
 
 任一进程流不是 TTY 时，启动在挂载前失败。组合应用必须把 TUI 挂载在其配置创建的 agent 之前，前门才能观察到 `agent-loop/config-start-failed`；精确匹配的会话失败在全屏模式开始前写入并以状态 1 退出，而不是留下空白终端。处置时停止扩展准入，卸载 `ctx.tui` provider 及其依赖插件，中止运行中的命令，移除 TUI 定义，停止 loader，拒绝待决提问，排空终端输入，恢复终端状态，注销事件监听器与用户交互 provider，且绝不退出 HMR 期间的替代进程。用户退出会处置应用根，使同级资源关闭，然后退出；五秒回退防止一个卡死的处置器困住进程。
 

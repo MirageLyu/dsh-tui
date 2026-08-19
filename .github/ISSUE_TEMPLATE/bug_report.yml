@@ -9,8 +9,8 @@ body:
       description: |
         `dsh --version` plus the installed TUI version. The profile lockfile has
         both: `cat $DSH_HOME/profiles/<name>/pnpm-lock.yaml` (or run
-        `dsh plugin --profile <name> why @deepseek-ai/dsh-tui`).
-      placeholder: dsh 0.1.0-rc.7 · @deepseek-ai/dsh-tui 0.1.0-rc.5
+        `dsh plugin --profile <name> why @miragelyu/dsh-tui`).
+      placeholder: dsh 0.1.0-rc.7 · @miragelyu/dsh-tui 0.1.0-rc.5
     validations:
       required: true
   - type: input
@@ -27,7 +27,7 @@ body:
       label: Steps to reproduce
       description: The shortest command sequence that reproduces the behavior.
       placeholder: |
-        1. dsh plugin --profile tui add @deepseek-ai/dsh-tui
+        1. dsh plugin --profile tui add @miragelyu/dsh-tui
         2. dsh --profile tui
         3. type /status, press Enter
     validations:

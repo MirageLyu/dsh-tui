@@ -1,4 +1,4 @@
-# @deepseek-ai/dsh-tui
+# @miragelyu/dsh-tui
 
 [![CI](https://github.com/MirageLyu/dsh-tui/actions/workflows/ci.yml/badge.svg)](https://github.com/MirageLyu/dsh-tui/actions/workflows/ci.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
@@ -54,7 +54,7 @@
 ## 安装
 
 ```sh
-dsh plugin --profile tui add @deepseek-ai/dsh-tui
+dsh plugin --profile tui add @miragelyu/dsh-tui
 ```
 
 该命令以 `@deepseek-ai/dsh-base` 初始化 `tui` profile，从 registry 安装本 bundle，并把它加入 profile 的 bundle 栈。从本地仓库安装：
@@ -66,7 +66,7 @@ dsh plugin --profile tui add link:/path/to/dsh-tui
 拔除后 bundle 出栈，profile 回落到 `dsh-base`：
 
 ```sh
-dsh plugin --profile tui remove @deepseek-ai/dsh-tui
+dsh plugin --profile tui remove @miragelyu/dsh-tui
 ```
 
 ## 快速开始

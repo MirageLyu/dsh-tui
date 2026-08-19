@@ -2,7 +2,7 @@
 
 中文 | [English](terminal-ui.md)
 
-全屏交互式终端界面以树外插件 bundle 的形式安装在 [dsh-base](https://www.npmjs.com/package/@deepseek-ai/dsh-base) 之上：`dsh plugin --profile tui add @deepseek-ai/dsh-tui` 之后，`dsh --profile tui` 在 pi-tui 上渲染单会话 agent 的对话记录，通过共享的 [user-questions](https://www.npmjs.com/package/@deepseek-ai/dsh-user-questions) / [user-approval](https://www.npmjs.com/package/@deepseek-ai/dsh-user-approval) seam 回答用户提问与审批，并拥有该会话的 agent 生命周期。[包 README](../README.md) 拥有按键、对话框、配置与模型体验契约；[重新引入笔记](../.agents/notes/implemented/feature/2026-08-18-reintroduce-tui-as-shipped-profile.md) 拥有重新引入决策。
+全屏交互式终端界面以树外插件 bundle 的形式安装在 [dsh-base](https://www.npmjs.com/package/@deepseek-ai/dsh-base) 之上：`dsh plugin --profile tui add @miragelyu/dsh-tui` 之后，`dsh --profile tui` 在 pi-tui 上渲染单会话 agent 的对话记录，通过共享的 [user-questions](https://www.npmjs.com/package/@deepseek-ai/dsh-user-questions) / [user-approval](https://www.npmjs.com/package/@deepseek-ai/dsh-user-approval) seam 回答用户提问与审批，并拥有该会话的 agent 生命周期。[包 README](../README.md) 拥有按键、对话框、配置与模型体验契约；[重新引入笔记](../.agents/notes/implemented/feature/2026-08-18-reintroduce-tui-as-shipped-profile.md) 拥有重新引入决策。
 
 源码：[`src/index.ts`](../src/index.ts)
 

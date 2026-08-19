@@ -1,4 +1,4 @@
-# @deepseek-ai/dsh-tui
+# @miragelyu/dsh-tui
 
 [![CI](https://github.com/MirageLyu/dsh-tui/actions/workflows/ci.yml/badge.svg)](https://github.com/MirageLyu/dsh-tui/actions/workflows/ci.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
@@ -54,7 +54,7 @@ A sample session:
 ## Installation
 
 ```sh
-dsh plugin --profile tui add @deepseek-ai/dsh-tui
+dsh plugin --profile tui add @miragelyu/dsh-tui
 ```
 
 This initializes a `tui` profile over `@deepseek-ai/dsh-base`, installs the bundle from the registry, and adds it to the profile's bundle stack. From a local checkout:
@@ -66,7 +66,7 @@ dsh plugin --profile tui add link:/path/to/dsh-tui
 Unplugging removes the bundle and the profile falls back to `dsh-base`:
 
 ```sh
-dsh plugin --profile tui remove @deepseek-ai/dsh-tui
+dsh plugin --profile tui remove @miragelyu/dsh-tui
 ```
 
 ## Quick start

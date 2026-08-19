@@ -1,13 +1,13 @@
 /**
- * Package-owned invariant companion for `@deepseek-ai/dsh-tui`.
- * @module @deepseek-ai/dsh-tui/invariant
+ * Package-owned invariant companion for `@miragelyu/dsh-tui`.
+ * @module @miragelyu/dsh-tui/invariant
  */
 
 /* jscpd:ignore-start */
 import type { Context } from '@deepseek-ai/cordis'
 import type { InvariantInstaller } from '@deepseek-ai/dsh-invariants'
 
-const PACKAGE_NAME = '@deepseek-ai/dsh-tui'
+const PACKAGE_NAME = '@miragelyu/dsh-tui'
 
 /** Cordis companion plugin name. */
 export const name = 'tui-invariant'

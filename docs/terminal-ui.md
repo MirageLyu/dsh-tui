@@ -2,7 +2,7 @@
 
 English | [中文](terminal-ui.zh.md)
 
-The full-screen interactive terminal surface installs as an out-of-tree plugin bundle over [dsh-base](https://www.npmjs.com/package/@deepseek-ai/dsh-base): `dsh plugin --profile tui add @deepseek-ai/dsh-tui` then `dsh --profile tui` renders the single-session agent transcript on pi-tui, answers user questions and approvals through the shared [user-questions](https://www.npmjs.com/package/@deepseek-ai/dsh-user-questions) / [user-approval](https://www.npmjs.com/package/@deepseek-ai/dsh-user-approval) seams, and owns the session's agent lifecycle. The [package README](../README.md) owns keys, dialogs, configuration, and the model-experience contract; the [reintroduction note](../.agents/notes/implemented/feature/2026-08-18-reintroduce-tui-as-shipped-profile.md) owns the reintroduction decision.
+The full-screen interactive terminal surface installs as an out-of-tree plugin bundle over [dsh-base](https://www.npmjs.com/package/@deepseek-ai/dsh-base): `dsh plugin --profile tui add @miragelyu/dsh-tui` then `dsh --profile tui` renders the single-session agent transcript on pi-tui, answers user questions and approvals through the shared [user-questions](https://www.npmjs.com/package/@deepseek-ai/dsh-user-questions) / [user-approval](https://www.npmjs.com/package/@deepseek-ai/dsh-user-approval) seams, and owns the session's agent lifecycle. The [package README](../README.md) owns keys, dialogs, configuration, and the model-experience contract; the [reintroduction note](../.agents/notes/implemented/feature/2026-08-18-reintroduce-tui-as-shipped-profile.md) owns the reintroduction decision.
 
 Source: [`src/index.ts`](../src/index.ts)
 

@@ -4,7 +4,7 @@
  * time in FIFO order, and settles each request on decision, abort, overlay
  * error, or channel shutdown. Requests for other agents fall through to the
  * next answerer via `next()`.
- * @module @deepseek-ai/dsh-tui/chat/approval
+ * @module @miragelyu/dsh-tui/chat/approval
  */
 
 import type { Agent } from '@deepseek-ai/dsh-agent'

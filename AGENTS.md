@@ -14,4 +14,4 @@ Rules for this standalone repository.
 - **The TUI is an external plugin.** It must never rely on being shipped
   inside the dsh installation: every seam access goes through the public
   service contracts of the pinned packages, and installation is through
-  `dsh plugin --profile <name> add @deepseek-ai/dsh-tui`.
+  `dsh plugin --profile <name> add @miragelyu/dsh-tui`.

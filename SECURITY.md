@@ -2,7 +2,7 @@
 
 ## Supported versions
 
-Only the latest published release of `@deepseek-ai/dsh-tui` receives security fixes. The pinned `@deepseek-ai/dsh-*` family in `package.json` is the compatibility statement; older families are unsupported.
+Only the latest published release of `@miragelyu/dsh-tui` receives security fixes. The pinned `@deepseek-ai/dsh-*` family in `package.json` is the compatibility statement; older families are unsupported.
 
 ## Reporting a vulnerability
 

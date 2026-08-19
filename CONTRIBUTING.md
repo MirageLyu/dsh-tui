@@ -1,6 +1,6 @@
 # Contributing
 
-Thanks for contributing to the terminal UI. This repository is the standalone home of `@deepseek-ai/dsh-tui`, an out-of-tree plugin bundle for [DeepSeek Harness](https://github.com/deepseek-ai/deepseek-harness). Everything here — the interaction surface, configuration, and rendering contracts — lives behind the [README](README.md), the [behavioral contract](docs/contract.md), and the [service contracts](docs/terminal-ui.md).
+Thanks for contributing to the terminal UI. This repository is the standalone home of `@miragelyu/dsh-tui`, an out-of-tree plugin bundle for [DeepSeek Harness](https://github.com/deepseek-ai/deepseek-harness). Everything here — the interaction surface, configuration, and rendering contracts — lives behind the [README](README.md), the [behavioral contract](docs/contract.md), and the [service contracts](docs/terminal-ui.md).
 
 ## Setup
 

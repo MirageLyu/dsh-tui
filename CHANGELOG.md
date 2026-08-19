@@ -9,11 +9,11 @@ All notable changes to this project are documented in this file. The format foll
 
 ## [0.1.0-rc.5] - 2026-08-19
 
-The first release from this repository: the full-screen terminal UI extracted from the `deepseek-ai/deepseek-harness` monorepo as the standalone out-of-tree plugin `@deepseek-ai/dsh-tui`.
+The first release from this repository: the full-screen terminal UI extracted from the `deepseek-ai/deepseek-harness` monorepo as the standalone out-of-tree plugin `@miragelyu/dsh-tui`.
 
 ### Added
 
-- Full-screen interactive terminal front door over the `@deepseek-ai/dsh-base` + `@deepseek-ai/dsh-tui` bundle stack, installed with `dsh plugin --profile tui add @deepseek-ai/dsh-tui`.
+- Full-screen interactive terminal front door over the `@deepseek-ai/dsh-base` + `@miragelyu/dsh-tui` bundle stack, installed with `dsh plugin --profile tui add @miragelyu/dsh-tui`.
 - Streamed agent transcript with per-tool render intents (terminal, diff, and generic cards).
 - Thinking collapse (`✦ Thinking · N words`), tool-card preview/full/hidden folding, and a full-screen tool-body pager.
 - Inline approval dialogs and `ask_user_question` answering through the shared seams; plan-mode reviews render in the same overlay queue.

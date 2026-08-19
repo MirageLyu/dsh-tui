@@ -61,7 +61,7 @@
     # The keyboard-backed provider behind ask_user_question and the plan-mode
     # review.
     - id: tui-prompt
-      name: '@deepseek-ai/dsh-tui/prompt'
+      name: '@miragelyu/dsh-tui/prompt'
 
     # The ask-user-question model tool the provider above answers.
     - id: tool-ask-user
@@ -70,13 +70,13 @@
     # Ordinary provider for the parsed TUI flags. Its plugin-level injection
     # waits for cmdlineArgs; no launcher metadata or special row kind is needed.
     - id: tui-startup
-      name: '@deepseek-ai/dsh-tui/startup'
+      name: '@miragelyu/dsh-tui/startup'
 
     # The runner: creates or resumes the session's agent, then mounts the
     # full-screen channel over it. Reads its invocation from the ordinary
     # tuiStartup provider; absent one (embedders) it starts a fresh session.
     - id: tui-runner
-      name: '@deepseek-ai/dsh-tui'
+      name: '@miragelyu/dsh-tui'
       inject: [tuiStartup]
       config:
         showReasoning: true
