@@ -1,0 +1,23 @@
+name: Deprecate
+
+on:
+  workflow_dispatch:
+    inputs:
+      spec:
+        description: 'package spec to deprecate, e.g. @miragelyu/dsh-tui@0.1.0-rc.5'
+        required: true
+      message:
+        description: 'deprecation message'
+        required: true
+
+jobs:
+  deprecate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          registry-url: 'https://registry.npmjs.org'
+      - run: npm deprecate "${{ github.event.inputs.spec }}" "${{ github.event.inputs.message }}"
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}

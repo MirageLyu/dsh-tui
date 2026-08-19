@@ -1,6 +1,7 @@
 # @miragelyu/dsh-tui
 
 [![CI](https://github.com/MirageLyu/dsh-tui/actions/workflows/ci.yml/badge.svg)](https://github.com/MirageLyu/dsh-tui/actions/workflows/ci.yml)
+[![npm](https://img.shields.io/npm/v/@miragelyu/dsh-tui)](https://www.npmjs.com/package/@miragelyu/dsh-tui)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 
 English | [中文](README.zh.md)
