@@ -4,7 +4,7 @@ import type { Agent } from '@deepseek-ai/dsh-agent'
 import type {
   Component,
   OverlayHandle,
-} from '@earendil-works/pi-tui'
+} from '@miragelyu/pi-tui'
 import type {
   TuiComponent,
   TuiOverlayHost,

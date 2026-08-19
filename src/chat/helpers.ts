@@ -14,7 +14,7 @@ import {
   Editor,
   truncateToWidth,
   visibleWidth,
-} from '@earendil-works/pi-tui'
+} from '@miragelyu/pi-tui'
 import { isCompactCheckpointSource } from '@deepseek-ai/dsh-compaction'
 import { isAppendSurfaceEvent, isReplacementSurfaceEvent } from '@deepseek-ai/dsh-session'
 import type { Session, SessionEvent } from '@deepseek-ai/dsh-session'

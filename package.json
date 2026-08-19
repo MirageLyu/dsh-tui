@@ -66,10 +66,10 @@
     "@deepseek-ai/dsh-tmux-context": "^0.1.0-rc.7",
     "@deepseek-ai/dsh-tool-ask-user": "^0.1.0-rc.7",
     "@deepseek-ai/schemastery": "^3.18.1",
-    "@earendil-works/pi-tui": "npm:@miragelyu/pi-tui@0.80.7",
     "commander": "^15.0.0",
     "diff": "^9.0.0",
-    "saxes": "6.0.0"
+    "saxes": "6.0.0",
+    "@miragelyu/pi-tui": "workspace:*"
   },
   "peerDependencies": {
     "@deepseek-ai/cordis": "^4.0.1",

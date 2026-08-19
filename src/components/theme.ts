@@ -9,7 +9,7 @@ import type {
   MarkdownTheme,
   SelectListTheme,
   TerminalColorScheme,
-} from '@earendil-works/pi-tui'
+} from '@miragelyu/pi-tui'
 
 /**
  * Text carrying exactly one palette color. Branded so the compiler rejects

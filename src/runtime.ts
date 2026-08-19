@@ -6,7 +6,7 @@
  * @module @miragelyu/dsh-tui/runtime
  */
 
-import type { Terminal } from '@earendil-works/pi-tui'
+import type { Terminal } from '@miragelyu/pi-tui'
 import type { SessionId } from '@deepseek-ai/dsh-session'
 
 /** Process-lifecycle owner used by the shipped CLI for an atomic resume handoff. */

@@ -12,7 +12,7 @@ import type { TuiExtensionService } from '../index.ts'
 import type {
   Component,
   Focusable,
-} from '@earendil-works/pi-tui'
+} from '@miragelyu/pi-tui'
 import type {
   TuiComponent,
   TuiFocusable,

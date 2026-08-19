@@ -3,7 +3,7 @@ import { homedir, tmpdir } from 'node:os'
 import { join, resolve, sep } from 'node:path'
 import { describe, expect, it, vi } from 'vitest'
 import { Context } from '@deepseek-ai/cordis'
-import { CombinedAutocompleteProvider, visibleWidth, type Terminal } from '@earendil-works/pi-tui'
+import { CombinedAutocompleteProvider, visibleWidth, type Terminal } from '@miragelyu/pi-tui'
 import AgentRegistry, {
   agentEvents, assembleContextFor, Inbox, type Agent, type AgentStatus,
 } from '@deepseek-ai/dsh-agent'

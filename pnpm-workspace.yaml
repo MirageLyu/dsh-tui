@@ -17,8 +17,3 @@ allowBuilds:
   node-addon-require-builtin: false
   koffi: true
 
-# The published tarball depends on the pi-tui fork through an npm alias; in
-# this workspace the same name resolves to the local fork so dev installs and
-# CI use the patched source of record.
-overrides:
-  '@earendil-works/pi-tui': link:vendor/pi-tui

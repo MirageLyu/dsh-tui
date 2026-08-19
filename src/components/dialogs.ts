@@ -16,7 +16,7 @@ import {
   type Component,
   type Focusable,
   type SelectItem,
-} from '@earendil-works/pi-tui'
+} from '@miragelyu/pi-tui'
 import type { Context } from '@deepseek-ai/cordis'
 import {
   type Agent,

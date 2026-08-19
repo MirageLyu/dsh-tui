@@ -27,9 +27,9 @@ jobs:
       - name: Publish
         run: |
           if [[ "$GITHUB_REF_NAME" == *-rc* ]]; then
-            npm publish --access public --provenance --tag rc
+            pnpm publish --access public --provenance --tag rc
           else
-            npm publish --access public --provenance
+            pnpm publish --access public --provenance
           fi
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}

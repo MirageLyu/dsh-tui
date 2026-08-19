@@ -1,6 +1,6 @@
 import { createUserMessage, MessageId , createMessage } from '@deepseek-ai/dsh-llm'
 import { Context } from '@deepseek-ai/cordis'
-import type { Terminal } from '@earendil-works/pi-tui'
+import type { Terminal } from '@miragelyu/pi-tui'
 import AgentRegistry, {
   Inbox,
   type Agent,

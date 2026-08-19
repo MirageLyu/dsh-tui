@@ -4,9 +4,6 @@ settings:
   autoInstallPeers: true
   excludeLinksFromLockfile: false
 
-overrides:
-  '@earendil-works/pi-tui': link:vendor/pi-tui
-
 importers:
 
   .:
@@ -44,8 +41,8 @@ importers:
       '@deepseek-ai/schemastery':
         specifier: ^3.18.1
         version: 3.18.1
-      '@earendil-works/pi-tui':
-        specifier: link:vendor/pi-tui
+      '@miragelyu/pi-tui':
+        specifier: workspace:*
         version: link:vendor/pi-tui
       commander:
         specifier: ^15.0.0

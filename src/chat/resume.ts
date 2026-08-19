@@ -6,7 +6,7 @@
  */
 
 import { stat } from 'node:fs/promises'
-import type { TUI } from '@earendil-works/pi-tui'
+import type { TUI } from '@miragelyu/pi-tui'
 import type { Agent, AgentStatus } from '@deepseek-ai/dsh-agent'
 import { errorChain } from '@deepseek-ai/dsh-llm'
 import type { SessionEvent, SessionId } from '@deepseek-ai/dsh-session'

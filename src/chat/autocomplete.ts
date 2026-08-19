@@ -9,7 +9,7 @@ import {
   type AutocompleteItem,
   type AutocompleteProvider,
   type AutocompleteSuggestions,
-} from '@earendil-works/pi-tui'
+} from '@miragelyu/pi-tui'
 import type { Agent } from '@deepseek-ai/dsh-agent'
 import {
   formatSessionReferenceMention,

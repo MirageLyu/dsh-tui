@@ -1,4 +1,4 @@
-import type { Terminal } from '@earendil-works/pi-tui'
+import type { Terminal } from '@miragelyu/pi-tui'
 import { Terminal as XtermTerminal, type IBufferCell } from '@xterm/headless'
 
 const FRAME_END = '\x1b[?2026l'

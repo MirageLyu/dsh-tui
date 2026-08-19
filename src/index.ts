@@ -19,7 +19,7 @@ import {
   type EditorTheme,
   type SlashCommand,
   type TerminalColorScheme,
-} from '@earendil-works/pi-tui'
+} from '@miragelyu/pi-tui'
 import { randomUUID } from 'node:crypto'
 import { spawn } from 'node:child_process'
 import { Service, type Context, type Fiber, type FiberState } from '@deepseek-ai/cordis'

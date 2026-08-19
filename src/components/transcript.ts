@@ -14,7 +14,7 @@ import {
   wrapTextWithAnsi,
   type Component,
   type MarkdownTheme,
-} from '@earendil-works/pi-tui'
+} from '@miragelyu/pi-tui'
 import { diffLines as compareLines } from 'diff'
 import type { Agent } from '@deepseek-ai/dsh-agent'
 import type { ContentBlock, StreamChunk } from '@deepseek-ai/dsh-llm'
