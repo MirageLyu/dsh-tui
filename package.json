@@ -3,7 +3,8 @@
   "description": "The dsh terminal-surface bundle: a full-screen interactive TUI patch layer over dsh-base plus the pi-tui chat channel, keyboard dialogs, slash commands, resume, and approval/question answerers",
   "version": "0.1.0-rc.6",
   "publishConfig": {
-    "access": "public"
+    "access": "public",
+    "publish-branch": "*"
   },
   "repository": {
     "type": "git",
