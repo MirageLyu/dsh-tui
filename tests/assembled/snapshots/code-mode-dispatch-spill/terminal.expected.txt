@@ -1,0 +1,53 @@
+terminal 100x36 buffer=normal length=36 base=0 viewport=0
+lifecycle started=1 stopped=0 progress=inactive
+title "Using ONE run_code program: call — DSH TUI snapshot"
+cursor hidden column=7 viewportRow=23 bufferRow=23
+buffer
+0| " DEEPSEEK HARNESS"
+  style 1-8 fg=bright-magenta bold
+  style 10-16 bold
+1| " Using ONE run_code program: call"
+  style 1-32 dim
+2| " main-session"
+  style 1-12 dim
+3| <blank>
+4| "You                                                                                                 "
+  style 0-2 fg=bright-magenta bold underline
+5| "Using ONE run_code program: call the bash tool exactly once with the command seq 1 200 | awk        "
+  style 77-99 fg=cyan
+6| "'{printf \"line %04d: the quick brown fox jumps over the lazy dog\\n\", $1}', then return ONLY the     "
+  style 0-72 fg=cyan
+7| "number of lines in its output. Reply with just that number and stop.                                "
+8| <blank>
+9| "Assistant                                                                                           "
+  style 0-8 fg=bright-magenta bold underline
+10| "✦ Thinking · 29 words                                                                               "
+  style 0-20 dim
+11| <blank>
+12| "● Tool / run_code"
+  style 0-16 fg=green
+13| "Count lines in seq/awk output                                                                       "
+  style 0-99 dim
+14| "200                                                                                                 "
+  style 0-99 dim
+15| "Model wait 0.0s · Completed 2026-07-21 12:00:00                                                     "
+  style 0-46 dim
+16| <blank>
+17| "Assistant                                                                                           "
+  style 0-8 fg=bright-magenta bold underline
+18| "✦ Thinking · 17 words                                                                               "
+  style 0-20 dim
+19| "200                                                                                                 "
+20| "Model wait 0.0s · Completed 2026-07-21 12:00:00                                                     "
+  style 0-46 dim
+21| <blank>
+22| "/workspace/project  deepseek-v4-flash  ↑123 ↓208  cache 99%  4% c"
+  style 0-52 fg=bright-magenta bold
+  style 55-71 dim
+  style 74-93 dim
+  style 96-99 dim
+23| " dsh ◍                                                                                              "
+  style 1-3 fg=bright-magenta bold
+  style 5-6 dim
+  style 7-7 inverse
+24-35| <blank>

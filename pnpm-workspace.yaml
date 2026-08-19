@@ -1,0 +1,21 @@
+packages:
+  - .
+
+# The pi-tui editor patch: fixed-width editor prefixes plus the frame/prompt
+# option surface the TUI renders through (see README).
+patchedDependencies:
+  '@earendil-works/pi-tui@0.80.7': patches/@earendil-works__pi-tui@0.80.7.patch
+
+# pnpm 10+ blocks any dependency shipping an install/build script until it is
+# explicitly reviewed here. node-pty (transitive via dsh-subprocess-local)
+# genuinely needs its install script for the persistent PTY backend, and
+# dsh-subprocess-local's postinstall restores the executable bit on the
+# macOS spawn helper.
+allowBuilds:
+  esbuild: true
+  node-pty: true
+  '@deepseek-ai/dsh-subprocess-local': true
+  '@google/genai': false
+  protobufjs: false
+  node-addon-require-builtin: false
+  koffi: true
