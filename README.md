@@ -140,7 +140,7 @@ This repository pins the published `@deepseek-ai/dsh-*` `0.1.0-rc.7` family (plu
 
 ## Documentation
 
-- [Behavioral contract](docs/contract.md) — the full interaction surface, config, color, and model experience
+- [Behavioral contract](docs/contract.md) ([中文](docs/contract.zh.md)) — the full interaction surface, config, color, and model experience
 - [Terminal UI services](docs/terminal-ui.md) — `ctx.tui` / `ctx.tuiPrompt` / `ctx.tuiResumeHost` contracts
 
 ## Development

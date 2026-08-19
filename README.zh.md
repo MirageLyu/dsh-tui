@@ -121,7 +121,7 @@ dsh --profile tui --model deepseek-official/deepseek-v4-flash
 
 ## 配置
 
-bundle 从 profile 的 patch 层读取配置（完整表格见[行为契约](docs/contract.md)）：
+bundle 从 profile 的 patch 层读取配置（完整表格见[行为契约](docs/contract.zh.md)）：
 
 | 键 | 默认值 | 含义 |
 |---|---|---|
@@ -140,8 +140,8 @@ bundle 从 profile 的 patch 层读取配置（完整表格见[行为契约](doc
 
 ## 文档
 
-- [行为契约](docs/contract.md)（英文）——完整交互界面、配置、配色与模型体验
-- [终端 UI 服务](docs/terminal-ui.md)——`ctx.tui` / `ctx.tuiPrompt` / `ctx.tuiResumeHost` 契约
+- [行为契约](docs/contract.zh.md)——完整交互界面、配置、配色与模型体验
+- [终端 UI 服务](docs/terminal-ui.zh.md)——`ctx.tui` / `ctx.tuiPrompt` / `ctx.tuiResumeHost` 契约
 
 ## 开发
 
