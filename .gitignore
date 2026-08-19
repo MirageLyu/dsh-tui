@@ -4,5 +4,6 @@ lib/tests/
 *.tsbuildinfo
 coverage/
 dist/
+!vendor/pi-tui/dist/
 .env
 .DS_Store
