@@ -278,8 +278,12 @@ async function materializeFixtureCwd(fixtureFile: string, cwd: string, replayRoo
 }
 
 function normalizeTerminalSnapshot(snapshot: string, cwd: string, displayCwd: string): string {
+  // Frame rows are JSON-stringified, so a Windows cwd renders with doubled
+  // backslashes; normalize the escaped spelling before the plain one.
+  const escapedCwd = cwd.replaceAll('\\', '\\\\')
   return snapshot
     .split(`/private${cwd}`).join('/workspace/project')
+    .split(escapedCwd).join('/workspace/project')
     .split(displayCwd).join('/workspace/project')
     .split(cwd).join('/workspace/project')
     .replace(UUID_RE, '{{uuid}}')

@@ -1,0 +1,5 @@
+# Recorded fixtures and goldens must replay byte-identically across
+# platforms: force LF everywhere under tests/ (session logs, SKILL.md
+# frontmatter, terminal expected outputs).
+tests/** text eol=lf
+*.jsonl text eol=lf
