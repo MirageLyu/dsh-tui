@@ -270,7 +270,10 @@ function rawSessionLog(session: Session): string {
 
 async function materializeFixtureCwd(fixtureFile: string, cwd: string, replayRoot: string): Promise<string> {
   const realized = join(replayRoot, basename(fixtureFile))
-  await writeFile(realized, (await readFile(fixtureFile, 'utf8')).split('{{cwd}}').join(cwd))
+  // The token sits inside JSON string values in the fixture, so substitute
+  // the JSON-escaped path: Windows backslashes must survive JSON parsing.
+  const escaped = cwd.replaceAll('\\', '\\\\').replaceAll('"', '\\"')
+  await writeFile(realized, (await readFile(fixtureFile, 'utf8')).split('{{cwd}}').join(escaped))
   return realized
 }
 
