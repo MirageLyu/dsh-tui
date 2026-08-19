@@ -166,6 +166,6 @@
     "ai"
   ],
   "pnpm": {
-    "publish-branch": "*"
+    "publishBranch": "*"
   }
 }
