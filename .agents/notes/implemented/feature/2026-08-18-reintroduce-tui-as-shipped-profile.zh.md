@@ -6,7 +6,7 @@ Status: implemented
 
 ## 问题
 
-[TUI 移除](../simplification/2026-08-04-remove-tui-package.md)在隐式 `dsh` 入口退役后删除了 `@deepseek-ai/dsh-tui`，因为当时没有任何已发布的组合消费它，Web 成为唯一交互界面。现在终端优先的交互界面成为产品需求：`dsh --profile tui` 必须打开一个 Claude Code 风格的全屏终端 agent——流式对话记录、工具卡片、内联审批与提问对话框、斜杠命令、会话恢复——并且要建立在当前 profile/bundle 架构之上，而不是恢复被移除的隐式 `dsh` 启动器、被删除的 SDK 工具链选项，或从零重建另一个产品级前端。
+[TUI 移除](https://github.com/deepseek-ai/deepseek-harness/blob/main/.agents/notes/implemented/simplification/2026-08-04-remove-tui-package.md)在隐式 `dsh` 入口退役后删除了 `@deepseek-ai/dsh-tui`，因为当时没有任何已发布的组合消费它，Web 成为唯一交互界面。现在终端优先的交互界面成为产品需求：`dsh --profile tui` 必须打开一个 Claude Code 风格的全屏终端 agent——流式对话记录、工具卡片、内联审批与提问对话框、斜杠命令、会话恢复——并且要建立在当前 profile/bundle 架构之上，而不是恢复被移除的隐式 `dsh` 启动器、被删除的 SDK 工具链选项，或从零重建另一个产品级前端。
 
 ## 决策
 
@@ -28,4 +28,4 @@ Status: implemented
 
 ## 后果
 
-`dsh --profile tui` 成为已发布的交互界面：单会话、进程级 agent，具备流式对话记录、工具卡片、内联审批与提问对话框、`/resume`/`/model`/`/status`/`/details` 命令、权限预设与持久会话存储。base bundle 自预设拆分以来"为 TUI 保留"的 agent 平面行，如今重新有了具名消费者。[移除笔记](../simplification/2026-08-04-remove-tui-package.md)保持活跃：其重新引入条件即本笔记的清单，只有其"没有终端 UI 包"的后果被取代。
+`dsh --profile tui` 成为已发布的交互界面：单会话、进程级 agent，具备流式对话记录、工具卡片、内联审批与提问对话框、`/resume`/`/model`/`/status`/`/details` 命令、权限预设与持久会话存储。base bundle 自预设拆分以来"为 TUI 保留"的 agent 平面行，如今重新有了具名消费者。[移除笔记](https://github.com/deepseek-ai/deepseek-harness/blob/main/.agents/notes/implemented/simplification/2026-08-04-remove-tui-package.md)保持活跃：其重新引入条件即本笔记的清单，只有其"没有终端 UI 包"的后果被取代。

@@ -6,7 +6,7 @@ English | [中文](2026-08-18-reintroduce-tui-as-shipped-profile.zh.md)
 
 ## Problem
 
-The [TUI removal](../simplification/2026-08-04-remove-tui-package.md) deleted `@deepseek-ai/dsh-tui` because no shipped composition consumed it after the implicit `dsh` entrypoint retired. Web remained the only interactive surface. A terminal-first interactive surface is now a product requirement: `dsh --profile tui` must open a full-screen Claude Code-style agent — streamed transcript, tool cards, inline approval and question dialogs, slash commands, resume — over the current profile/bundle architecture, without restoring the removed implicit `dsh` launcher, the deleted SDK toolchain option, or a second product-shaped frontend rebuilt from scratch.
+The [TUI removal](https://github.com/deepseek-ai/deepseek-harness/blob/main/.agents/notes/implemented/simplification/2026-08-04-remove-tui-package.md) deleted `@deepseek-ai/dsh-tui` because no shipped composition consumed it after the implicit `dsh` entrypoint retired. Web remained the only interactive surface. A terminal-first interactive surface is now a product requirement: `dsh --profile tui` must open a full-screen Claude Code-style agent — streamed transcript, tool cards, inline approval and question dialogs, slash commands, resume — over the current profile/bundle architecture, without restoring the removed implicit `dsh` launcher, the deleted SDK toolchain option, or a second product-shaped frontend rebuilt from scratch.
 
 ## Decision
 
@@ -28,4 +28,4 @@ The `tui` profile boot is exercised end to end under a sized PTY (help, banner, 
 
 ## Consequences
 
-`dsh --profile tui` is a shipped interactive surface: a single-session, process-wide agent with streamed transcript, tool cards, inline approval and question dialogs, `/resume`/`/model`/`/status`/`/details` commands, permission presets, and durable session persistence. The base bundle's agent-plane rows (kept "for the TUI" since the preset split) now have their named consumer again. The [removal note](../simplification/2026-08-04-remove-tui-package.md) stays active: its reintroduction conditions are this note's checklist, and only its "no terminal UI package" consequence is superseded.
+`dsh --profile tui` is a shipped interactive surface: a single-session, process-wide agent with streamed transcript, tool cards, inline approval and question dialogs, `/resume`/`/model`/`/status`/`/details` commands, permission presets, and durable session persistence. The base bundle's agent-plane rows (kept "for the TUI" since the preset split) now have their named consumer again. The [removal note](https://github.com/deepseek-ai/deepseek-harness/blob/main/.agents/notes/implemented/simplification/2026-08-04-remove-tui-package.md) stays active: its reintroduction conditions are this note's checklist, and only its "no terminal UI package" consequence is superseded.

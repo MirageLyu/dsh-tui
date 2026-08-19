@@ -147,5 +147,22 @@
     "@deepseek-ai/dsh-tool-todo": "^0.1.0-rc.7",
     "@deepseek-ai/dsh-tool-workflow": "^0.1.0-rc.7",
     "@deepseek-ai/dsh-workflow-worker-thread": "^0.1.0-rc.7"
-  }
+  },
+  "homepage": "https://github.com/MirageLyu/dsh-tui#readme",
+  "bugs": {
+    "url": "https://github.com/MirageLyu/dsh-tui/issues"
+  },
+  "engines": {
+    "node": "^22.19.0 || >=24.0.0"
+  },
+  "keywords": [
+    "dsh",
+    "deepseek-harness",
+    "terminal",
+    "tui",
+    "cli",
+    "agent",
+    "claude-code",
+    "ai"
+  ]
 }

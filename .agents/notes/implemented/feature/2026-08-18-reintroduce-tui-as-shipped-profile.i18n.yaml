@@ -1,6 +1,5 @@
-# Bilingual-pair consistency record (docs/i18n/README.md): the git blob hash of each
-# side as of the last confirmed-consistent state. Both languages carry equal authority;
-# after editing either side, bring the other along and re-record with:
-#   pnpm run verify-translation-pairing --write .agents/notes/implemented/feature/2026-08-18-reintroduce-tui-as-shipped-profile.md
-2026-08-18-reintroduce-tui-as-shipped-profile.md: bea843046cb9b343b718ebe02a8ff13758df5b3b
-2026-08-18-reintroduce-tui-as-shipped-profile.zh.md: 48677107ac6801d72143664010b59084d8bb0018
+# Bilingual-pair consistency record: the git blob hash of each side as of the
+# last confirmed-consistent state. Both languages carry equal authority; after
+# editing either side, bring the other along and re-record the hashes.
+2026-08-18-reintroduce-tui-as-shipped-profile.md: ee8f4185e54a479ea718ebce51d34201854d5371
+2026-08-18-reintroduce-tui-as-shipped-profile.zh.md: 530371a4a0c44cc3f32789a56d7de5960173b8eb
