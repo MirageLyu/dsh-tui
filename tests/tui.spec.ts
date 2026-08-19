@@ -1,6 +1,6 @@
 import { mkdir, mkdtemp, rm, utimes, writeFile } from 'node:fs/promises'
 import { homedir, tmpdir } from 'node:os'
-import { join, resolve } from 'node:path'
+import { join, resolve, sep } from 'node:path'
 import { describe, expect, it, vi } from 'vitest'
 import { Context } from '@deepseek-ai/cordis'
 import { CombinedAutocompleteProvider, visibleWidth, type Terminal } from '@earendil-works/pi-tui'
@@ -3400,7 +3400,13 @@ describe('pi-tui chat lifecycle and transcript', () => {
     await mkdir(join(cwd, 'docs'), { recursive: true })
     await writeFile(join(cwd, 'src', 'source-file.ts'), 'export const source = true\n')
     await writeFile(join(cwd, 'docs', 'design notes.md'), '# Design\n')
-    await writeFile(join(cwd, 'unsafe\nfile.ts'), 'unsafe name\n')
+    // A control character in a filename is a POSIX-only fixture: Windows
+    // cannot create the name at all, so the exclusion assertion below only
+    // runs where the file can exist.
+    const unsafeName = 'unsafe\nfile.ts'
+    if (process.platform !== 'win32') {
+      await writeFile(join(cwd, unsafeName), 'unsafe name\n')
+    }
     const result = await setup({
       cwd,
       tools: {
@@ -3449,7 +3455,9 @@ describe('pi-tui chat lifecycle and transcript', () => {
 
       result.terminal.send('@unsafe')
       await tick()
-      expect(result.terminal.output).not.toContain('File · unsafe')
+      if (process.platform !== 'win32') {
+        expect(result.terminal.output).not.toContain('File · unsafe')
+      }
       result.terminal.send('\x03')
     } finally {
       await result.controller.dispose()
@@ -6874,7 +6882,9 @@ describe('terminal mounting', () => {
       cwd: join(homedir(), 'projects', 'dsh-tui'),
     })
     await tick()
-    expect(terminal.output).toContain('\x1b[95m~/')
+    // The home abbreviation keeps the platform separator: `~/` on POSIX,
+    // `~\` on Windows.
+    expect(terminal.output).toContain(`\x1b[95m~${sep}`)
     expect(terminal.output).toContain('\x1b[2;39m (tui-staging)')
     await disposeTuiTestHarness(result)
   })
