@@ -7,3 +7,4 @@ dist/
 !vendor/pi-tui/dist/
 .env
 .DS_Store
+*.tgz
