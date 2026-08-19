@@ -22,6 +22,14 @@ jobs:
           cache: pnpm
       - run: pnpm install --frozen-lockfile
       - run: pnpm build
-      - run: npm publish --access public --provenance
+      # npm refuses prereleases on the default `latest` tag: rc versions
+      # publish under `rc`, stable versions keep the default.
+      - name: Publish
+        run: |
+          if [[ "$GITHUB_REF_NAME" == *-rc* ]]; then
+            npm publish --access public --provenance --tag rc
+          else
+            npm publish --access public --provenance
+          fi
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
