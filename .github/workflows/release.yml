@@ -26,8 +26,13 @@ jobs:
       # publish under `rc`, stable versions keep the default.
       - name: Publish
         run: |
+          VERSION=$(node -p "require('./package.json').version")
+          if npm view "@miragelyu/dsh-tui@$VERSION" version >/dev/null 2>&1; then
+            echo "already published: @miragelyu/dsh-tui@$VERSION"
+            exit 0
+          fi
           if [[ "$GITHUB_REF_NAME" == *-rc* ]]; then
-            pnpm publish --access public --provenance --no-git-checks --tag rc --no-git-checks
+            pnpm publish --access public --provenance --no-git-checks --tag rc
           else
             pnpm publish --access public --provenance --no-git-checks
           fi
